@@ -166,9 +166,8 @@ public class CommentControllerTest {
         Mockito.when(commentService.getMovieRanking(Mockito.any(LocalDate.class), Mockito.any(LocalDate.class)))
                 .thenReturn(movieRankResponses);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/top")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"dateFrom\":\"02-10-1980\",\"dateTo\":\"04-10-2020\"}"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/top?dateFrom=02-10-1980&dateTo=04-10-2020")
+                .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.[0].movieId").value(1))
                 .andExpect(jsonPath("$.[0].totalComments").value(2))

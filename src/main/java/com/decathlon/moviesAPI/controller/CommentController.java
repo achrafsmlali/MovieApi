@@ -4,13 +4,14 @@ import com.decathlon.moviesAPI.exception.MovieNotFoundException;
 import com.decathlon.moviesAPI.model.Comment;
 import com.decathlon.moviesAPI.model.Movie;
 import com.decathlon.moviesAPI.payload.CommentRequest;
-import com.decathlon.moviesAPI.payload.DateRangRequest;
 import com.decathlon.moviesAPI.payload.MovieRankResponse;
 import com.decathlon.moviesAPI.service.CommentService;
 import com.decathlon.moviesAPI.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -67,8 +68,9 @@ public class CommentController {
 
     @GetMapping("/top")
     @ResponseBody
-    public List<MovieRankResponse> getMovieRaking(@RequestBody(required = true) DateRangRequest dateRangRequest){
-        return commentService.getMovieRanking(dateRangRequest.getDateFrom(),dateRangRequest.getDateTo());
+    public List<MovieRankResponse> getMovieRaking(@RequestParam(required = true) @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dateFrom,
+                                                  @RequestParam(required = true) @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dateTo){
+        return commentService.getMovieRanking(dateFrom,dateTo);
     }
 
 }
