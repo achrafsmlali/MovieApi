@@ -1,7 +1,7 @@
 # Movie API
 To know before using the project:
 
- - This project uses the OMDb API an open Movie database. To be able to
+ - This project uses the OMDb API, an open Movie database. To be able to
  fetch data from this API you need to generate an ApiKey. Us this [Link](http://www.omdbapi.com/apikey.aspx). Once the key generated add it to in the application.properties : 
     - `omdb.apikey=<yourApiKey>`
  
@@ -53,4 +53,4 @@ To know before using the project:
    7. Get request on `/top?dateFrom=02-10-1980&dateTo=04-10-2020` to get movies ranking in specifique date range. 
    8. Delete request on `/movies/1/` to delete Joker movie.
   
-To run the project execute `mvn spring-boot:run`. To run tests execute `mvn test.
+To run the project execute `mvn spring-boot:run`. To run tests execute `mvn test`.
