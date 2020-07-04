@@ -20,7 +20,7 @@ To know before using the project:
             "title": "Joker"
           }
         ```
-      then Batman, Hulk and SuperMan as a title.
+      then Batman, Hulk, SuperMan and Spiderman as a title.
    2. Get request on `/movies` to get all movies.
    3. Put request on `/movies/1/` to edit the Joker movie. It takes 
    as a Request body the movie with the update data (for example I'll edit the title):
@@ -46,17 +46,11 @@ To know before using the project:
                 "movieId": 1
               }
          ```
-      add another comments to Joker and a second one for Batman and for Hulk.
+      add another comments to Joker, Batman, and Hulk.
       
    5. Get request on `/coments` to get all comments.
    6. Get request on `/coments?id=1` to get all Joker comments.
-   7. Get request on `/top` to get movies ranking. It takes as a Request body the date range of search.
-        ```javascript
-          {
-            "dateFrom": "22-01-1988",
-            "dateTo": "10-05-2020"
-          }
-        ```
+   7. Get request on `/top?dateFrom=02-10-1980&dateTo=04-10-2020` to get movies ranking in specifique date range. 
    8. Delete request on `/movies/1/` to delete Joker movie.
   
 
