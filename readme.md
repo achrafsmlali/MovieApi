@@ -46,11 +46,17 @@ To know before using the project:
                 "movieId": 1
               }
          ```
-      add another comments to Joker and a second one To Batman.
+      add another comments to Joker and a second one for Batman and for Hulk.
       
    5. Get request on `/coments` to get all comments.
    6. Get request on `/coments?id=1` to get all Joker comments.
-   7. Get request on `/top` to get movies ranking.
+   7. Get request on `/top` to get movies ranking. It takes as a Request body the date range of search.
+        ```javascript
+          {
+            "dateFrom": "22-01-1988",
+            "dateTo": "10-05-2020"
+          }
+        ```
    8. Delete request on `/movies/1/` to delete Joker movie.
   
 
