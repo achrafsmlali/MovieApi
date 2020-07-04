@@ -9,7 +9,7 @@ To know before using the project:
  
  - Once the server is launched you will have accesses to:
     - the h2 database console via [http://localhost:8080/h2-console](http://localhost:8080/h2-console). Use the default h2 username and password to connect to the database (the username is "sa" and password is empty). 
-    - the Api Swagger UI via [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html,) witch I advise you to use for this API testing (visual navigation, request body examples ...).
+    - the Api Swagger UI via [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) witch I advise you to use for this API testing (visual navigation, request body examples ...).
     
  - The project is launched by default in the port 8080.
  
@@ -46,11 +46,17 @@ To know before using the project:
                 "movieId": 1
               }
          ```
-      add another comments to Joker and a second one To Batman.
+      add another comments to Joker and a second one for Batman and for Hulk.
       
    5. Get request on `/coments` to get all comments.
    6. Get request on `/coments?id=1` to get all Joker comments.
-   7. Get request on `/top` to get movies ranking.
+   7. Get request on `/top` to get movies ranking. It takes as a Request body the date range of search.
+        ```javascript
+          {
+            "dateFrom": "22-01-1988",
+            "dateTo": "10-05-2020"
+          }
+        ```
    8. Delete request on `/movies/1/` to delete Joker movie.
   
 
