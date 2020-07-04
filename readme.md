@@ -9,7 +9,7 @@ To know before using the project:
  
  - Once the server is launched you will have accesses to:
     - the h2 database console via [http://localhost:8080/h2-console](http://localhost:8080/h2-console). Use the default h2 username and password to connect to the database (the username is "sa" and password is empty). 
-    - the Api Swagger UI via [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html,) witch I advise you to use for this API testing (visual navigation, request body examples ...).
+    - the Api Swagger UI via [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) witch I advise you to use for this API testing (visual navigation, request body examples ...).
     
  - The project is launched by default in the port 8080.
  
