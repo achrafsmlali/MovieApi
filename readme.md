@@ -2,7 +2,8 @@
 To know before using the project:
 
  - This project uses the OMDb API an open Movie database. To be able to
- fetch data from this API you need to generate an ApiKey. Us this [Link](http://www.omdbapi.com/apikey.aspx). Once the key generated add it to in the application.properties : `omdb.apikey=<yourApiKey>`
+ fetch data from this API you need to generate an ApiKey. Us this [Link](http://www.omdbapi.com/apikey.aspx). Once the key generated add it to in the application.properties : 
+    - `omdb.apikey=<yourApiKey>`
  
  - For simplicity the project uses an in-memory h2 database (data will be lost after restarting the server).
  
